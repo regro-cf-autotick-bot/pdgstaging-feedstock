@@ -1,5 +1,5 @@
-{% set version = "0.9.1" %}
-{% set sha256 = "eb37ef775280a54be5d7f949849fc5f016ed6584410c7888d4f6d015a8ce8675" %}
+{% set version = "0.9.2" %}
+{% set sha256 = "5d11a3bd5e55c64988163473c5066d76e6b5cd7bf51cbc0adfb36f894c80d937" %}
 {% set build_number = 0 %}
 
 package:
@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/PermafrostDiscoveryGateway/viz-staging/archive/{{ version }}.tar.gz
+  url: https://github.com/PermafrostDiscoveryGateway/viz-staging/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
