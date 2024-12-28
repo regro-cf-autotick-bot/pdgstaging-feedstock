@@ -1,6 +1,6 @@
 {% set version = "0.9.1" %}
 {% set sha256 = "eb37ef775280a54be5d7f949849fc5f016ed6584410c7888d4f6d015a8ce8675" %}
-{% set build_number = 0 %}
+{% set build_number = 1 %}
 
 package:
   name: "pdgstaging"
@@ -17,10 +17,10 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<4.0
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.9,<4.0
+    - python >={{ python_min }},<4.0
     - numpy >=1.2,<2.0
     - pandas >=1.4,<2.0
     - shapely >=2,<3.0
@@ -43,6 +43,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/PermafrostDiscoveryGateway/viz-staging
